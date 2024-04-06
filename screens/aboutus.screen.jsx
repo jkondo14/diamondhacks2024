@@ -14,8 +14,8 @@ const AboutUs = ({ navigation }) => {
         and we hope you enjoy using our app!
       </Text>
       <Button
-        title='Go back'
-        onPress={() => navigation.goBack()}
+        title='Home'
+        onPress={() => navigation.navigate('Home')}
         style={styles.button}
       />
     </View>
