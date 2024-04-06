@@ -11,11 +11,13 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.diamondhacks.maps",
+      "config": {
+        "googleMapasApiKey": "AIzaSyBYoI0Lf-EbOmS1Z7xUkeaG1IBCjs9j8_8"
+      }
     },
     "android": {
       "adaptiveIcon": {
