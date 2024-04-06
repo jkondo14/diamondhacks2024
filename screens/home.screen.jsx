@@ -8,7 +8,7 @@ const HomeScreen = ({ navigation }) => {
       <Text style={styles.title}>Home Screen</Text>
       <Button
         title='About Us'
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate('About Us')}
         style={styles.button}
       />
       <Button
