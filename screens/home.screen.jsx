@@ -22,8 +22,8 @@ const HomeScreen = ({ navigation }) => {
         style={styles.button}
       />
       <View style={styles.imageRow}>
-        <Image source={require('../images/UCSDLogo.png')} style={styles.image} />
-        <Image source={require('../images/acmlogo.png')} style={styles.image}/>
+        <Image source={require('../images/UCSDLogo.png')} style={styles.image1} resizeMode="contain" />
+        <Image source={require('../images/acmlogo.png')} style={styles.image2} resizeMode="contain" />
         </View>
       <StatusBar style='auto' />
     </View>
@@ -58,10 +58,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row', // Aligns children (images) in a row
     justifyContent: 'space-around', // Adjusts spacing around images
   },
-  image: {
-    width: 500, // Set the width
-    height: 500, // Set the height
-    marginBottom: 20, // Add some space below the image
+  image1: {
+    width: 200, // Set the width
+    height: 200, // Set the height
+    marginBottom: 1, // Add some space below the image
+  },
+  image2: {
+    width: 200,
+    height: 200,
+    marginBottom: 1,
   },
 });
 
