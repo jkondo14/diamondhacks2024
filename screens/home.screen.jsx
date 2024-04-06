@@ -1,11 +1,16 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Button from '../components/button.component';
 
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
+      <Text style={styles.title}>Study with us at UCSD!</Text>
+      <Text style={styles.paragraph}>
+        Welcome! We are glad you have stumbled across our beginner project consisiting of students, who are in their first year at
+        UCSD, both first-years and junior transfers. Feel free to explore our small tool we have created to enhance student's experience
+        for learning at UCSD. Go Tritons!
+      </Text>
       <Button
         title='About Us'
         onPress={() => navigation.navigate('About Us')}
@@ -16,6 +21,10 @@ const HomeScreen = ({ navigation }) => {
         onPress={() => navigation.navigate('Locations')}
         style={styles.button}
       />
+      <View style={styles.imageRow}>
+        <Image source={require('../images/UCSDLogo.png')} style={styles.image} />
+        <Image source={require('../images/acmlogo.png')} style={styles.image}/>
+        </View>
       <StatusBar style='auto' />
     </View>
   );
@@ -29,15 +38,30 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 24,
+    fontSize: 48,
     fontWeight: 'bold',
     marginBottom: 20, // Add some space between the title and the paragraph
+  },
+  paragraph: {
+    fontSize: 16,
+    textAlign: 'left',
+    marginBottom: 20,
+    paddingHorizontal: 100,
   },
   button: {
     backgroundColor: '#00bfff',
     padding: 10,
     borderRadius: 15,
     margin: 10,
+  },
+  imageRow: {
+    flexDirection: 'row', // Aligns children (images) in a row
+    justifyContent: 'space-around', // Adjusts spacing around images
+  },
+  image: {
+    width: 500, // Set the width
+    height: 500, // Set the height
+    marginBottom: 20, // Add some space below the image
   },
 });
 
