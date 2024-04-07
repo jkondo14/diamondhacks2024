@@ -38,7 +38,7 @@ const HomeScreen = ({ navigation }) => {
           UCSD, both first-years and junior transfers. Utilizing tools such as React, JavaScript, API, etc. we have created an extensive
           experience for students to find optimal study spaces!{'\n'}
           {'\n'}We understand that studying in your dormitory, apartment, or wherever you live may not always be one's preference as we
-          often are distarcted or feel sleepy at home. We also understand that people like change and do not like to only study at
+          often are distracted or feel sleepy at home. We also understand that people like change and do not like to only study at
           Geisel Library forever so we made it our mission to make an amazing application and create an interactive expereience. 
           Stay Locked in with new study spots and become the Academic weapon you always aspired to be!{'\n'}
           {'\n'}Feel free to explore our small tool we have created to enhance student's experience
