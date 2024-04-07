@@ -1,18 +1,28 @@
 import React, { useRef } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, View, Pressable, Button } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker, Callout } from "react-native-maps";
 import { markers } from "../assets/markers";
+import SideMenu from "../components/sidemenu.component";
 
 export default function UCSDMaps() {
   const mapRef = useRef(null);
 
-  const zoomToMarkers = () => {
-    const coordinates = markers.map((marker) => marker.latlng);
-    mapRef.current.fitToCoordinates(coordinates, {
-      edgePadding: { top: 50, right: 50, bottom: 50, left: 50 },
-      animated: true,
-    });
+  // const zoomToMarkers = (coordinates) => {
+  //   // const coordinates = markers.map((marker) => marker.latlng);
+  //   mapRef.current.fitToCoordinates(coordinates, {
+  //     edgePadding: { top: 50, right: 50, bottom: 50, left: 50 },
+  //     animated: true,
+  //   });
+  // };
+
+  const zoomToCoordinate = (coordinate, zoomLevel = 0.001) => {
+    const region = {
+      ...coordinate,
+      latitudeDelta: zoomLevel,
+      longitudeDelta: zoomLevel,
+    };
+    mapRef.current.animateToRegion(region, 500);
   };
 
   // const getRandomHexColor = () => {
@@ -21,7 +31,6 @@ export default function UCSDMaps() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Interactive Map</Text>
       <MapView
         ref={mapRef}
         initialRegion={{
@@ -30,7 +39,7 @@ export default function UCSDMaps() {
           latitudeDelta: 0.05,
           longitudeDelta: 0.05,
         }}
-        style={{ height: "80%", width: "100%" }}
+        style={{ height: "100%", width: "100%" }}
         provider={PROVIDER_GOOGLE}
       >
         {markers.map((marker, index) => (
@@ -44,6 +53,38 @@ export default function UCSDMaps() {
         ))}
       </MapView>
       <StatusBar style="auto" />
+      <View
+        style={{
+          position: "absolute",
+          top: 60,
+          backgroundColor: "rgba(255, 2550, 255, 0.7)",
+          borderRadius: 10,
+        }}
+      >
+        <Pressable
+          onPress={() =>
+            zoomToCoordinate(
+              {
+                latitude: 32.88118132880787,
+                longitude: -117.23442488535535,
+              },
+              0.05
+            )
+          }
+        >
+          <Text style={styles.title}>Interactive Map</Text>
+        </Pressable>
+      </View>
+
+      <View
+        style={{
+          position: "absolute",
+          top: 70,
+          left: 10,
+        }}
+      >
+        <SideMenu zoom={zoomToCoordinate} />
+      </View>
     </View>
   );
 }
@@ -56,10 +97,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    marginTop:40,
-    fontSize: 40,
-    fontWeight: 'bold',
-    paddingBottom: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    fontSize: 30,
+    fontWeight: "bold",
   },
   calloutdesc: {
     flexDirection: "column",
@@ -69,4 +110,3 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
   },
 });
-
