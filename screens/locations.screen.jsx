@@ -110,10 +110,10 @@ const colleges = [
     name: 'Miscellaneous',
     description: 'Locations:',
     features: [
-      { id: '23', feature: 'Glider Lounge', value: '3000 Seats', link: 'https://tinyurl.com/ynmx3cxk' },
-      { id: '24', feature: 'Price Center', value: '900 Seats', link: 'https://tinyurl.com/mr225a8j' },
-      { id: '25', feature: 'Design and Innovation Building', value: '900 Seats', link: 'https://tinyurl.com/4eu4jr4u' },
-      { id: '26', feature: 'Structural and Material Engineering Building', value: '900 Seats', link: 'https://tinyurl.com/3u3trtzu' },
+      { id: '23', feature: 'Glider Lounge', value: '50 Seats', link: 'https://tinyurl.com/ynmx3cxk' },
+      { id: '24', feature: 'Price Center', value: '300 Seats', link: 'https://tinyurl.com/mr225a8j' },
+      { id: '25', feature: 'Design and Innovation Building', value: '50 Seats', link: 'https://tinyurl.com/4eu4jr4u' },
+      { id: '26', feature: 'Structural and Material Engineering Building', value: '50 Seats', link: 'https://tinyurl.com/3u3trtzu' },
     ],
   },
 ];
