@@ -8,8 +8,8 @@ const colleges = [
     name: 'Revelle College',
     description: 'Locations:',
     features: [
-      { feature: '64 Degrees', value: '323 Seats' },
-      { feature: 'Galbraith Hall', value: '130 Seats' },
+      { feature: '64 Degrees', value: '323 Seats' , link: 'https://rb.gy/ik3wle'},
+      { feature: 'Galbraith Hall', value: '130 Seats', link: 'https://rb.gy/lyqpdf' },
     ],
   },
   {
@@ -17,10 +17,10 @@ const colleges = [
     name: 'Muir College',
     description: 'Locations:',
     features: [
-      { feature: 'John\'s Market(Outdoors)', value: '10 Seats' },
-      { feature: 'Middle of Muir(MOM)', value: '121 Seats' },
-      { feature: 'Pines Dining Hall', value: '274 Seats' },
-      { feature: 'Roots Restaurant', value: '50 Seats' },
+      { feature: 'John\'s Market(Outdoors)', value: '10 Seats'},
+      { feature: 'Middle of Muir(MOM)', value: '121 Seats'},
+      { feature: 'Pines Dining Hall', value: '274 Seats'},
+      { feature: 'Roots Restaurant', value: '50 Seats'},
     ],
   },
   {
@@ -28,7 +28,7 @@ const colleges = [
     name: 'Marshall College',
     description: 'Locations:',
     features: [
-      { feature: 'Ocean View Terrance Restaurant', value: '175 Seats' },
+      { feature: 'Ocean View Terrance Restaurant', value: '175 Seats'},
     ],
   },
   {
@@ -36,10 +36,10 @@ const colleges = [
     name: 'Warren College',
     description: 'Locations:',
     features: [
-      { feature: 'Canyon Vista Restaurant', value: '250 Seats' },
-      { feature: 'CSE Building(Lab excluded)', value: '100 Seats' },
-      { feature: 'Franklin Antonio Hall', value: '50 Seats' },
-      { feature: 'JK Wood Lounge', value: '25 Seats' },
+      { feature: 'Canyon Vista Restaurant', value: '250 Seats'},
+      { feature: 'CSE Building(Lab excluded)', value: '100 Seats'},
+      { feature: 'Franklin Antonio Hall', value: '50 Seats'},
+      { feature: 'JK Wood Lounge', value: '25 Seats'},
     ],
   },
   {
@@ -47,7 +47,7 @@ const colleges = [
     name: 'Roosevelt College',
     description: 'Locations:',
     features: [
-      { feature: 'Cafe Ventanas Restaurant', value: '290 Seats' },
+      { feature: 'Cafe Ventanas Restaurant', value: '290 Seats'},
     ],
   },
   {
@@ -55,7 +55,7 @@ const colleges = [
     name: 'Sixth College',
     description: 'Locations:',
     features: [
-      { feature: 'The Restaurants at Sixth', value: '200 Seats' },
+      { feature: 'The Restaurants at Sixth', value: '200 Seats'},
       { feature: 'Sixth Commuter Center', value: '30 seats'},
       { feature: 'Sixth Terrances', value: '40 seats'},
 
@@ -66,7 +66,7 @@ const colleges = [
     name: 'Seventh College',
     description: 'Locations:',
     features: [
-      { feature: 'The Bistro', value: '40 Seats' },
+      { feature: 'The Bistro', value: '40 Seats'},
     ],
   },
   {
@@ -74,7 +74,7 @@ const colleges = [
     name: 'Eigth College',
     description: 'Locations:',
     features: [
-      { feature: 'Podemos', value: '10 Seats' },
+      { feature: 'Podemos', value: '10 Seats'},
     ],
   },
   {
