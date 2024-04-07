@@ -5,36 +5,50 @@ import Button from '../components/button.component';
 const Feedback = ({ navigation }) => {
     const [feedbackText, setFeedbackText] = useState('');
     
+
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     const submitFeedback = () => {
         console.log(feedbackText);
         Keyboard.dismiss(); // Dismiss the keyboard upon submission
+        setIsSubmitted(true); // Indicate that feedback has been submitted
       };
   
-    return (
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-        <ScrollView style={styles.scrollView}>
-          <View style={styles.container}>
-            <Text style={styles.title}>Feedback</Text>
-            <Text style={styles.paragraph}>We appreciate you taking the time to explore our study space app! We would love to hear your feedback as we
-            we know there is still so much to work on. Thank you and love you all!{'\n'}</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Your feedback here..."
-              value={feedbackText}
-              onChangeText={setFeedbackText}
-              multiline
-              numberOfLines={4}
-            />
-            <Button
-                title="Submit Feedback"
-                onPress={submitFeedback}
-                style={styles.button}
-            />
-          </View>
-        </ScrollView>
-      </TouchableWithoutFeedback>
-    );
-  };
+      return (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+          <ScrollView style={styles.scrollView}>
+            <View style={styles.container}>
+              <Text style={styles.title}>{isSubmitted ? "Thank You!" : "Feedback"}</Text>
+              {isSubmitted ? (
+                <Text style={styles.thankYouMessage}>
+                  Thank you for your feedback! We appreciate your support and will continue working hard to improve your experience.
+                </Text>
+              ) : (
+                <>
+                  <Text style={styles.paragraph}>
+                    We appreciate you taking the time to explore our study space app! We would love to hear your feedback as we
+                    know there is still so much to work on. Thank you and love you all!{'\n'}
+                  </Text>
+                  <TextInput
+                    style={styles.input}
+                    placeholder="Your feedback here..."
+                    value={feedbackText}
+                    onChangeText={setFeedbackText}
+                    multiline
+                    numberOfLines={4}
+                  />
+                  <Button
+                    title="Submit Feedback"
+                    onPress={submitFeedback}
+                    style={styles.button}
+                  />
+                </>
+              )}
+            </View>
+          </ScrollView>
+        </TouchableWithoutFeedback>
+      );
+    };
   
 
 const styles = StyleSheet.create({
@@ -71,6 +85,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 20,
     paddingBottom: 20,
+    paddingHorizontal: 10,
+  },
+  thankYouMessage: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginTop: 20, // Adjust spacing as needed
     paddingHorizontal: 10,
   },
   button: {
