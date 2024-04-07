@@ -96,4 +96,49 @@ export const markers = [
         title: "Foodworx",
         description: "drip",
       },
+      {
+        latlng: { latitude: 32.88109119907227, longitude: -117.23756557410896 },
+        title: "Geisel Library",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.875268842444974, longitude: -117.23693985146731 },
+        title: "WongAvery Library",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.88572518986429, longitude: -117.24048730872062 },
+        title: "Glider Lounge",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.87972093704347, longitude: -117.23619428995961 },
+        title: "Price Center",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.87482628946273, longitude: -117.24145932860618 },
+        title: "Revelle Commuter Lounge",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.872984489083905, longitude: -117.23530561285024 },
+        title: "The Nook & Lobby Lounge",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.879514207326906, longitude: -117.23228874300251 },
+        title: "Design & Innovation Building",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.87994749474885, longitude: -117.23296726363698 },
+        title: "Structural and Material Engineering Building",
+        description: "drip",
+      },
+      {
+        latlng: { latitude: 32.880365, longitude: -117.241242 },
+        title: "Sixth Terrace(5th Floor)",
+        description: "drip",
+      },
   ];
