@@ -14,11 +14,6 @@ const AboutUs = ({ navigation }) => {
         and we hope you enjoy using our app!{'\n'}
         {'\n'}
       </Text>
-      <Button
-        title='Home'
-        onPress={() => navigation.navigate('Home')}
-        style={styles.button}
-      />
     </View>
   );
 };
@@ -42,12 +37,6 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     paddingHorizontal: 10,
-  },
-  button: {
-    backgroundColor: '#00bfff',
-    padding: 10,
-    borderRadius: 15,
-    margin: 10,
   },
 });
 

@@ -21,8 +21,7 @@ export default function UCSDMaps() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Button onPress={zoomToMarkers} title="rat" color="#841584" />
+      <Text style={styles.title}>Interactive Map</Text>
       <MapView
         ref={mapRef}
         initialRegion={{
@@ -52,9 +51,15 @@ export default function UCSDMaps() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#add8e6",
     alignItems: "center",
     justifyContent: "center",
+  },
+  title: {
+    marginTop:40,
+    fontSize: 40,
+    fontWeight: 'bold',
+    paddingBottom: 20,
   },
   calloutdesc: {
     flexDirection: "column",
