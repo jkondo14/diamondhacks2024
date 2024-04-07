@@ -13,6 +13,10 @@ const Feedback = ({ navigation }) => {
         Keyboard.dismiss(); // Dismiss the keyboard upon submission
         setIsSubmitted(true); // Indicate that feedback has been submitted
       };
+      const resetFeedback = () => {
+        setFeedbackText('');
+        setIsSubmitted(false);
+      };
   
       return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -20,9 +24,17 @@ const Feedback = ({ navigation }) => {
             <View style={styles.container}>
               <Text style={styles.title}>{isSubmitted ? "Thank You!" : "Feedback"}</Text>
               {isSubmitted ? (
-                <Text style={styles.thankYouMessage}>
-                  Thank you for your feedback! We appreciate your support and will continue working hard to improve your experience.
-                </Text>
+                <>
+                  <Text style={styles.thankYouMessage}>
+                    Thank you for your feedback! We appreciate your support and will continue working hard to improve your experience.{'\n'}
+                  </Text>
+                  <Text style={styles.triton}>GO TRITONS!</Text>
+                  <Button
+                    title="Submit Another Feedback"
+                    onPress={resetFeedback}
+                    style={styles.button}
+                  />
+                </>
               ) : (
                 <>
                   <Text style={styles.paragraph}>
@@ -87,8 +99,15 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingHorizontal: 10,
   },
+  triton: {
+    fontSize: 18,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    paddingBottom: 10,
+  },
   thankYouMessage: {
     fontSize: 18,
+    fontWeight: 'bold',
     textAlign: 'center',
     marginTop: 20, // Adjust spacing as needed
     paddingHorizontal: 10,

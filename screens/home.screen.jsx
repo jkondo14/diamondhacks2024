@@ -52,7 +52,6 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigation.navigate('About Us')}
             style={styles.button}
           />
-          <View style={styles.space} />
           <Button
             title="Locations"
             onPress={() => navigation.navigate('Locations')}
@@ -100,8 +99,10 @@ const styles = StyleSheet.create({
     paddingBottom: 0, // Ensure there's padding at the bottom
   },
   buttonContainer: {
-    flexDirection: 'row', // Aligns buttons horizontally
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-evenly', // This will evenly space your buttons
+    width: '100%', // Ensure the container spans the full width
   },
   space: {
     width: 20, // Spacing between buttons, adjust as needed
