@@ -58,6 +58,16 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigation.navigate('Locations')}
             style={styles.button}
           />
+          <Button
+            title="Map"
+            onPress={() => navigation.navigate('UCSD Map')}
+            style={styles.button}
+          />
+          <Button
+            title="Feedback"
+            onPress={() => navigation.navigate('Feedback')}
+            style={styles.button}
+          />
       </View>
         <View style={styles.imageRow}>
         <TouchableOpacity onPress={handlePressUCSDLogo}>
@@ -100,15 +110,15 @@ const styles = StyleSheet.create({
     fontSize: 60,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 350,
-    paddingTop: 300, 
+    marginBottom: 0,
+    paddingTop: 100, 
     paddingHorizontal: 15,// Add some space between the title and the paragraph
   },
   paragraph: {
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: 200,
+    paddingTop: 100,
     paddingBottom: 20,
     paddingHorizontal: 10,
   },

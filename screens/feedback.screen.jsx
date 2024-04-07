@@ -1,27 +1,41 @@
-import { View, Text, StyleSheet } from 'react-native';
-
+import { View, Text, StyleSheet, ScrollView, TextInput, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import React, { useState } from 'react';
 import Button from '../components/button.component';
 
 const Feedback = ({ navigation }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>About Us</Text>
-      <Text style={styles.paragraph}>
-        Welcome to our Study Space Explorer application! Our team consisitng of team members Brandon, Gavin, Henry and Jake is 
-        dedicated to providing you with the best experience possible and improving your study experience here at UCSD. 
-        We believe in quality, innovation, and customer satisfaction. Our app offers a wide range of features 
-        designed to enhance your daily life, making it more convenient and enjoyable. Thank you for choosing us, 
-        and we hope you enjoy using our app!{'\n'}
-        {'\n'}
-      </Text>
-      <Button
-        title='Home'
-        onPress={() => navigation.navigate('Home')}
-        style={styles.button}
-      />
-    </View>
-  );
-};
+    const [feedbackText, setFeedbackText] = useState('');
+    
+    const submitFeedback = () => {
+        console.log(feedbackText);
+        Keyboard.dismiss(); // Dismiss the keyboard upon submission
+      };
+  
+    return (
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.container}>
+            <Text style={styles.title}>Feedback</Text>
+            <Text style={styles.paragraph}>We appreciate you taking the time to explore our study space app! We would love to hear your feedback as we
+            we know there is still so much to work on. Thank you and love you all!{'\n'}</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Your feedback here..."
+              value={feedbackText}
+              onChangeText={setFeedbackText}
+              multiline
+              numberOfLines={4}
+            />
+            <Button
+                title="Submit Feedback"
+                onPress={submitFeedback}
+                style={styles.button}
+            />
+          </View>
+        </ScrollView>
+      </TouchableWithoutFeedback>
+    );
+  };
+  
 
 const styles = StyleSheet.create({
   container: {
@@ -30,10 +44,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  scrollView: {
+  width: '100%', // Ensure the ScrollView fills the width
+  backgroundColor: '#add8e6', // Match the background color if needed
+  },
+  input: {
+    height: 100, // Adjust based on your needs
+    marginTop: 12,
+    marginBottom: 12,
+    borderWidth: 1, // Thickness of the border
+    borderColor: '#ccc', // Color of the border
+    backgroundColor: 'white', // Background color of the text box
+    padding: 10, // Inner padding of the text box
+    borderRadius: 5, // Rounded corners of the text box
+    width: '90%', // Adjust the width as needed
+  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20, // Add some space between the title and the paragraph
+    marginBottom: 20,
+    paddingTop: 100, // Add some space between the title and the paragraph
   },
   paragraph: {
     fontSize: 16,

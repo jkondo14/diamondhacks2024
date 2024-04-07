@@ -7,7 +7,7 @@ const AboutUs = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.title}>About Us</Text>
       <Text style={styles.paragraph}>
-        Welcome to our Study Space Explorer application! Our team consisitng of team members Brandon, Gavin, Henry and Jake is 
+        Welcome to our Study Space Explorer application! Our team consisiting of team members Brandon, Gavin, Henry and Jake is 
         dedicated to providing you with the best experience possible and improving your study experience here at UCSD. 
         We believe in quality, innovation, and customer satisfaction. Our app offers a wide range of features 
         designed to enhance your daily life, making it more convenient and enjoyable. Thank you for choosing us, 

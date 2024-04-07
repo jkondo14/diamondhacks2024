@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   pageTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginTop: 20,
+    marginTop: 50,
     marginBottom: 10, // Add some space below the title
     textAlign: 'center', // Center the title
   },
