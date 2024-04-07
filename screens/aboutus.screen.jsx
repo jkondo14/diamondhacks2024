@@ -8,7 +8,7 @@ const AboutUs = ({ navigation }) => {
       <Text style={styles.paragraph}>
         Welcome to our Study Space Explorer application! Our team consisiting of team members Brandon, Gavin, Henry and Jake is 
         dedicated to providing you with the best experience possible and improving your study experience here at UCSD. 
-        We believe in quality, innovation, and customer satisfaction. Our app offers a wide range of features 
+        We believe in quality, innovation, and customer satisfaction and preparing the next generation of Tritons. Our app offers a wide range of features 
         designed to enhance your daily life, making it more convenient and enjoyable. Thank you for choosing us, 
         and we hope you enjoy using our app!{'\n'}
         {'\n'}

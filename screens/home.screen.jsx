@@ -53,13 +53,13 @@ const HomeScreen = ({ navigation }) => {
             style={styles.button}
           />
           <Button
-            title="Locations"
-            onPress={() => navigation.navigate('Locations')}
+            title="Map"
+            onPress={() => navigation.navigate('UCSD Map')}
             style={styles.button}
           />
           <Button
-            title="Map"
-            onPress={() => navigation.navigate('UCSD Map')}
+            title="Locations"
+            onPress={() => navigation.navigate('Locations')}
             style={styles.button}
           />
           <Button
