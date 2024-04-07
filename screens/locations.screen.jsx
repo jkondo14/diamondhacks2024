@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Linking } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Linking, Alert } from 'react-native';
 
 // Sample data with an additional "features" array for each college
 const colleges = [
@@ -8,8 +8,8 @@ const colleges = [
     name: 'Revelle College',
     description: 'Locations:',
     features: [
-      { id: '1', feature: '64 Degrees', value: '323 Seats', link: '###' },
-      { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: '###' },
+      { id: '1', feature: '64 Degrees', value: '323 Seats', link: 'https://rb.gy/ik3wle' },
+      { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: 'https://rb.gy/lyqpdf' },
     ],
   },
   {
@@ -116,6 +116,19 @@ const UCSDCollegesScreen = () => {
     }
   };
 
+  const handleOpenURL = async (url) => {
+    try {
+      const supported = await Linking.canOpenURL(url);
+      if (supported) {
+        await Linking.openURL(url);
+      } else {
+        Alert.alert("Error", `Unable to open URL: ${url}`);
+      }
+    } catch (error) {
+      Alert.alert("Error", `Unable to open URL: ${url}`);
+    }
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.pageTitle}>Locations on Campus!</Text>
@@ -134,7 +147,10 @@ const UCSDCollegesScreen = () => {
                     <Text style={styles.cell}>
                       {feature.feature}: {feature.value}
                       {feature.link && (
-                        <Text style={styles.link} onPress={() => Linking.openURL(feature.link)}>
+                        <Text
+                          style={styles.link}
+                          onPress={() => handleOpenURL(feature.link)}
+                        >
                           [More Info]
                         </Text>
                       )}
