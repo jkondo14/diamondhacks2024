@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-import Button from '../components/button.component';
 
 const AboutUs = ({ navigation }) => {
   return (
