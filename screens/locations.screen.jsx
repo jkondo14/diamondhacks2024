@@ -10,6 +10,7 @@ const colleges = [
     features: [
       { id: '1', feature: '64 Degrees', value: '323 Seats', link: 'https://rb.gy/ik3wle' },
       { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: 'https://rb.gy/lyqpdf' },
+      { id: '3', feature: 'Revelle Commuter Lounge', value: '25 Seats', link: 'https://rb.gy/cik7c5' },
     ],
   },
   {
@@ -17,10 +18,10 @@ const colleges = [
     name: 'Muir College',
     description: 'Locations:',
     features: [
-      { id: '3', feature: 'John\'s Market(Outdoors)', value: '10 Seats', link: '###' },
-      { id: '4', feature: 'Middle of Muir(MOM)', value: '121 Seats', link: '###' },
-      { id: '5', feature: 'Pines Dining Hall', value: '274 Seats', link: '###' },
-      { id: '6', feature: 'Roots Restaurant', value: '50 Seats', link: '###' },
+      { id: '4', feature: 'John\'s Market(Outdoors)', value: '10 Seats', link: 'https://rb.gy/asqgo9' },
+      { id: '5', feature: 'Middle of Muir(MOM)', value: '121 Seats', link: 'https://rb.gy/x0xlo9' },
+      { id: '6', feature: 'Pines Dining Hall', value: '274 Seats', link: 'https://tinyurl.com/mwkcztwj' },
+      { id: '7', feature: 'Roots Restaurant', value: '50 Seats', link: 'https://tinyurl.com/mstpds5u' },
     ],
   },
   {
@@ -28,7 +29,7 @@ const colleges = [
     name: 'Marshall College',
     description: 'Locations:',
     features: [
-      { id: '7', feature: 'Ocean View Terrance Restaurant', value: '175 Seats', link: '###' },
+      { id: '8', feature: 'Ocean View Terrance Restaurant', value: '175 Seats', link: 'https://tinyurl.com/2uhwhs25' },
     ],
   },
   {
@@ -36,10 +37,10 @@ const colleges = [
     name: 'Warren College',
     description: 'Locations:',
     features: [
-      { id: '8', feature: 'Canyon Vista Restaurant', value: '250 Seats', link: '###' },
-      { id: '9', feature: 'CSE Building(Lab excluded)', value: '100 Seats', link: '###' },
-      { id: '10', feature: 'Franklin Antonio Hall', value: '50 Seats', link: '###' },
-      { id: '11', feature: 'JK Wood Lounge', value: '25 Seats', link: '###' },
+      { id: '9', feature: 'Canyon Vista Restaurant', value: '250 Seats', link: 'https://tinyurl.com/bdd2m73u' },
+      { id: '10', feature: 'CSE Building(Lab excluded)', value: '100 Seats', link: 'https://tinyurl.com/bdhbnzfy' },
+      { id: '11', feature: 'Franklin Antonio Hall', value: '50 Seats', link: 'https://tinyurl.com/yy857np8' },
+      {feature: 'JK Wood Lounge', value: '25 Seats'},
     ],
   },
   {
@@ -47,7 +48,7 @@ const colleges = [
     name: 'Roosevelt College',
     description: 'Locations:',
     features: [
-      { id: '12', feature: 'Cafe Ventanas Restaurant', value: '290 Seats', link: '###' },
+      { id: '12', feature: 'Cafe Ventanas Restaurant', value: '290 Seats', link: 'https://tinyurl.com/4395fnpm' },
     ],
   },
   {
@@ -55,9 +56,9 @@ const colleges = [
     name: 'Sixth College',
     description: 'Locations:',
     features: [
-      { id: '13', feature: 'The Restaurants at Sixth', value: '200 Seats', link: '###' },
-      { id: '14', feature: 'Sixth Commuter Center', value: '30 seats', link: '###' },
-      { id: '15', feature: 'Sixth Terrances', value: '40 seats', link: '###' },
+      { id: '13', feature: 'The Restaurants at Sixth', value: '200 Seats', link: 'https://tinyurl.com/kunh5sne' },
+      { id: '14', feature: 'Sixth Commuter Center', value: '30 seats', link: 'https://tinyurl.com/2xfmate3'},
+      { id: '15', feature: 'Sixth Terrances', value: '40 seats', link: 'https://tinyurl.com/ttnxctdx' },
     ],
   },
   {
@@ -65,7 +66,8 @@ const colleges = [
     name: 'Seventh College',
     description: 'Locations:',
     features: [
-      { id: '16', feature: 'The Bistro', value: '40 Seats', link: '###' },
+      { id: '16', feature: 'The Bistro', value: '40 Seats', link: 'https://tinyurl.com/5329vef7' },
+      { id: '17', feature: 'North Break Study Lounge', value: '45 Seats', link: 'https://tinyurl.com/6hnw5k3z' },
     ],
   },
   {
@@ -73,7 +75,7 @@ const colleges = [
     name: 'Eigth College',
     description: 'Locations:',
     features: [
-      { id: '17', feature: 'Podemos', value: '10 Seats', link: '###' },
+      { id: '18', feature: 'Podemos', value: '10 Seats', link: 'https://tinyurl.com/43kvwue4' },
     ],
   },
   {
@@ -81,7 +83,7 @@ const colleges = [
     name: 'Pepper Canyon East',
     description: 'Locations:',
     features: [
-      { id: '18', feature: 'Foodworx Dining Hall', value: '30 Seats', link: '###' },
+      { id: '19', feature: 'Foodworx Dining Hall', value: '30 Seats', link: 'https://tinyurl.com/mubxd7zr' },
     ],
   },
   {
@@ -89,9 +91,9 @@ const colleges = [
     name: 'Rita Atkinson Residences',
     description: 'Locations:',
     features: [
-      { id: '19', feature: 'Lobby', value: '20 Seats', link: '###' },
-      { id: '20', feature: 'Ninth Floor', value: '5 Seats', link: '###' },
-      { id: '21', feature: 'The Nook', value: '15 Seats', link: '###' },
+      { id: '20', feature: 'Lobby', value: '20 Seats', link:'https://tinyurl.com/2s87z96u'},
+      {feature: 'Ninth Floor', value: '5 Seats'},
+      {feature: 'The Nook', value: '15 Seats'},
     ],
   },
   {
@@ -99,8 +101,19 @@ const colleges = [
     name: 'Libraries',
     description: 'Locations:',
     features: [
-      { id: '22', feature: 'Geisel Library', value: '3000 Seats', link: '###' },
-      { id: '23', feature: 'WongAvery Library', value: '900 Seats', link: '###' },
+      { id: '21', feature: 'Geisel Library', value: '3000 Seats', link: 'https://tinyurl.com/5fumf757' },
+      { id: '22', feature: 'WongAvery Library', value: '900 Seats', link: 'https://tinyurl.com/46bxc2vh' },
+    ],
+  },
+  {
+    id: '12',
+    name: 'Miscellaneous',
+    description: 'Locations:',
+    features: [
+      { id: '23', feature: 'Glider Lounge', value: '3000 Seats', link: 'https://tinyurl.com/ynmx3cxk' },
+      { id: '24', feature: 'Price Center', value: '900 Seats', link: 'https://tinyurl.com/mr225a8j' },
+      { id: '25', feature: 'Design and Innovation Building', value: '900 Seats', link: 'https://tinyurl.com/4eu4jr4u' },
+      { id: '26', feature: 'Structural and Material Engineering Building', value: '900 Seats', link: 'https://tinyurl.com/3u3trtzu' },
     ],
   },
 ];
