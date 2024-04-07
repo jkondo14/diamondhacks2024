@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Linking } from 'react-native';
 
 // Sample data with an additional "features" array for each college
 const colleges = [
@@ -8,8 +8,8 @@ const colleges = [
     name: 'Revelle College',
     description: 'Locations:',
     features: [
-      { feature: '64 Degrees', value: '323 Seats' , link: 'https://rb.gy/ik3wle'},
-      { feature: 'Galbraith Hall', value: '130 Seats', link: 'https://rb.gy/lyqpdf' },
+      { id: '1', feature: '64 Degrees', value: '323 Seats', link: 'https://rb.gy/ik3wle' },
+      { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: '###' },
     ],
   },
   {
@@ -17,10 +17,10 @@ const colleges = [
     name: 'Muir College',
     description: 'Locations:',
     features: [
-      { feature: 'John\'s Market(Outdoors)', value: '10 Seats'},
-      { feature: 'Middle of Muir(MOM)', value: '121 Seats'},
-      { feature: 'Pines Dining Hall', value: '274 Seats'},
-      { feature: 'Roots Restaurant', value: '50 Seats'},
+      { id: '3', feature: 'John\'s Market(Outdoors)', value: '10 Seats', link: '###' },
+      { id: '4', feature: 'Middle of Muir(MOM)', value: '121 Seats', link: '###' },
+      { id: '5', feature: 'Pines Dining Hall', value: '274 Seats', link: '###' },
+      { id: '6', feature: 'Roots Restaurant', value: '50 Seats', link: '###' },
     ],
   },
   {
@@ -28,7 +28,7 @@ const colleges = [
     name: 'Marshall College',
     description: 'Locations:',
     features: [
-      { feature: 'Ocean View Terrance Restaurant', value: '175 Seats'},
+      { id: '7', feature: 'Ocean View Terrance Restaurant', value: '175 Seats', link: '###' },
     ],
   },
   {
@@ -36,10 +36,10 @@ const colleges = [
     name: 'Warren College',
     description: 'Locations:',
     features: [
-      { feature: 'Canyon Vista Restaurant', value: '250 Seats'},
-      { feature: 'CSE Building(Lab excluded)', value: '100 Seats'},
-      { feature: 'Franklin Antonio Hall', value: '50 Seats'},
-      { feature: 'JK Wood Lounge', value: '25 Seats'},
+      { id: '8', feature: 'Canyon Vista Restaurant', value: '250 Seats', link: '###' },
+      { id: '9', feature: 'CSE Building(Lab excluded)', value: '100 Seats', link: '###' },
+      { id: '10', feature: 'Franklin Antonio Hall', value: '50 Seats', link: '###' },
+      { id: '11', feature: 'JK Wood Lounge', value: '25 Seats', link: '###' },
     ],
   },
   {
@@ -47,7 +47,7 @@ const colleges = [
     name: 'Roosevelt College',
     description: 'Locations:',
     features: [
-      { feature: 'Cafe Ventanas Restaurant', value: '290 Seats'},
+      { id: '12', feature: 'Cafe Ventanas Restaurant', value: '290 Seats', link: '###' },
     ],
   },
   {
@@ -55,10 +55,9 @@ const colleges = [
     name: 'Sixth College',
     description: 'Locations:',
     features: [
-      { feature: 'The Restaurants at Sixth', value: '200 Seats'},
-      { feature: 'Sixth Commuter Center', value: '30 seats'},
-      { feature: 'Sixth Terrances', value: '40 seats'},
-
+      { id: '13', feature: 'The Restaurants at Sixth', value: '200 Seats', link: '###' },
+      { id: '14', feature: 'Sixth Commuter Center', value: '30 seats', link: '###' },
+      { id: '15', feature: 'Sixth Terrances', value: '40 seats', link: '###' },
     ],
   },
   {
@@ -66,7 +65,7 @@ const colleges = [
     name: 'Seventh College',
     description: 'Locations:',
     features: [
-      { feature: 'The Bistro', value: '40 Seats'},
+      { id: '16', feature: 'The Bistro', value: '40 Seats', link: '###' },
     ],
   },
   {
@@ -74,7 +73,7 @@ const colleges = [
     name: 'Eigth College',
     description: 'Locations:',
     features: [
-      { feature: 'Podemos', value: '10 Seats'},
+      { id: '17', feature: 'Podemos', value: '10 Seats', link: '###' },
     ],
   },
   {
@@ -82,7 +81,7 @@ const colleges = [
     name: 'Pepper Canyon East',
     description: 'Locations:',
     features: [
-      { feature: 'Foodworx Dining Hall', value: '30 Seats' },
+      { id: '18', feature: 'Foodworx Dining Hall', value: '30 Seats', link: '###' },
     ],
   },
   {
@@ -90,9 +89,9 @@ const colleges = [
     name: 'Rita Atkinson Residences',
     description: 'Locations:',
     features: [
-      { feature: 'Lobby', value: '20 Seats' },
-      { feature: 'Ninth Floor', value: '5 Seats' },
-      { feature: 'The Nook', value: '15 Seats' },
+      { id: '19', feature: 'Lobby', value: '20 Seats', link: '###' },
+      { id: '20', feature: 'Ninth Floor', value: '5 Seats', link: '###' },
+      { id: '21', feature: 'The Nook', value: '15 Seats', link: '###' },
     ],
   },
   {
@@ -100,12 +99,10 @@ const colleges = [
     name: 'Libraries',
     description: 'Locations:',
     features: [
-      { feature: 'Geisel Library', value: '3000 Seats' },
-      { feature: 'WongAvery Library', value: '900 Seats' },
+      { id: '22', feature: 'Geisel Library', value: '3000 Seats', link: '###' },
+      { id: '23', feature: 'WongAvery Library', value: '900 Seats', link: '###' },
     ],
   },
-
-  // Add other colleges
 ];
 
 const UCSDCollegesScreen = () => {
@@ -121,8 +118,8 @@ const UCSDCollegesScreen = () => {
 
   return (
     <ScrollView style={styles.container}>
-       <Text style={styles.pageTitle}>Locations on Campus!</Text>
-       <Text style={styles.paragraph}>Click on the names of each area to discover study spots!</Text>
+      <Text style={styles.pageTitle}>Locations on Campus!</Text>
+      <Text style={styles.paragraph}>Click on the names of each area to discover study spots!</Text>
       {colleges.map((college) => (
         <View key={college.id} style={styles.section}>
           <TouchableOpacity onPress={() => toggleExpand(college.id)}>
@@ -132,10 +129,16 @@ const UCSDCollegesScreen = () => {
             <>
               <Text style={styles.sectionDescription}>{college.description}</Text>
               <View style={styles.table}>
-                {college.features.map((feature, index) => (
-                  <View key={index} style={styles.tableRow}>
-                    <Text style={styles.cell}>{feature.feature}</Text>
-                    <Text style={styles.cell}>{feature.value}</Text>
+                {college.features.map((feature) => (
+                  <View key={feature.id} style={styles.tableRow}>
+                    <Text style={styles.cell}>
+                      {feature.feature}: {feature.value}
+                      {feature.link && (
+                        <Text style={styles.link} onPress={() => Linking.openURL(feature.link)}>
+                          [More Info]
+                        </Text>
+                      )}
+                    </Text>
                   </View>
                 ))}
               </View>
@@ -156,8 +159,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 50,
-    marginBottom: 10, // Add some space below the title
-    textAlign: 'center', // Center the title
+    marginBottom: 10,
+    textAlign: 'center',
   },
   paragraph: {
     fontSize: 14,
@@ -196,6 +199,9 @@ const styles = StyleSheet.create({
   cell: {
     fontSize: 14,
   },
+  link: {
+    color: 'blue',
+    textDecorationLine: 'underline',
+    marginLeft: 5,
+  },
 });
-
-export default UCSDCollegesScreen;
