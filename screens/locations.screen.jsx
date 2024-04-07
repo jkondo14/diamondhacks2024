@@ -8,7 +8,7 @@ const colleges = [
     name: 'Revelle College',
     description: 'Locations:',
     features: [
-      { id: '1', feature: '64 Degrees', value: '323 Seats', link: 'https://rb.gy/ik3wle' },
+      { id: '1', feature: '64 Degrees', value: '323 Seats', link: '###' },
       { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: '###' },
     ],
   },
@@ -205,3 +205,5 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
 });
+
+export default UCSDCollegesScreen;
