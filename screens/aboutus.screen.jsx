@@ -22,12 +22,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#add8e6',
     alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 20, // Add padding at the top
   },
   title: {
-    fontSize: 24,
+    fontSize: 48,
     fontWeight: 'bold',
-    marginBottom: 20, 
+    marginBottom: 20,
+    marginTop: 50,
   },
   paragraph: {
     fontSize: 16,
