@@ -96,16 +96,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#add8e6',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 0, // Ensure there's padding at the bottom
+    paddingBottom: 0, 
   },
   buttonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly', // This will evenly space your buttons
-    width: '100%', // Ensure the container spans the full width
+    justifyContent: 'space-evenly', 
+    width: '100%', 
   },
   space: {
-    width: 20, // Spacing between buttons, adjust as needed
+    width: 20, 
   },
   title: {
     fontSize: 60,
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 0,
     paddingTop: 100, 
-    paddingHorizontal: 15,// Add some space between the title and the paragraph
+    paddingHorizontal: 15,
   },
   paragraph: {
     fontSize: 16,
@@ -130,13 +130,13 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   imageRow: {
-    flexDirection: 'row', // Aligns children (images) in a row
-    justifyContent: 'space-around', // Adjusts spacing around images
+    flexDirection: 'row', 
+    justifyContent: 'space-around', 
   },
   image1: {
-    width: 200, // Set the width
-    height: 200, // Set the height
-    marginBottom: 1, // Add some space below the image
+    width: 200, 
+    height: 200,
+    marginBottom: 1, 
   },
   image2: {
     width: 200,
@@ -144,16 +144,16 @@ const styles = StyleSheet.create({
     marginBottom: 1,
   },
   bottomContainer: {
-  backgroundColor: '#007BFF', // Example background color
-  width: '100%', // Ensure the background color spans the full width
-  paddingBottom: 20, // Add vertical padding to create space around the text
+  backgroundColor: '#007BFF', 
+  width: '100%', 
+  paddingBottom: 20, 
   marginBottom: 0,
-  paddingHorizontal: 20, // Add horizontal padding for better text spacing
+  paddingHorizontal: 20, 
 },
   bottomText: {
     fontSize: 14,
     textAlign: 'center',
-    color: '#fff', // White color for better readability, adjust as needed
+    color: '#fff', 
   },
 });
 

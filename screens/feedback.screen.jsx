@@ -10,8 +10,8 @@ const Feedback = ({ navigation }) => {
 
     const submitFeedback = () => {
         console.log(feedbackText);
-        Keyboard.dismiss(); // Dismiss the keyboard upon submission
-        setIsSubmitted(true); // Indicate that feedback has been submitted
+        Keyboard.dismiss(); 
+        setIsSubmitted(true); 
       };
       const resetFeedback = () => {
         setFeedbackText('');
@@ -71,25 +71,25 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   scrollView: {
-  width: '100%', // Ensure the ScrollView fills the width
-  backgroundColor: '#add8e6', // Match the background color if needed
+  width: '100%', 
+  backgroundColor: '#add8e6', 
   },
   input: {
-    height: 100, // Adjust based on your needs
+    height: 100, 
     marginTop: 12,
     marginBottom: 12,
-    borderWidth: 1, // Thickness of the border
-    borderColor: '#ccc', // Color of the border
-    backgroundColor: 'white', // Background color of the text box
-    padding: 10, // Inner padding of the text box
-    borderRadius: 5, // Rounded corners of the text box
-    width: '90%', // Adjust the width as needed
+    borderWidth: 1,
+    borderColor: '#ccc', 
+    backgroundColor: 'white', 
+    padding: 10, 
+    borderRadius: 5, 
+    width: '90%', 
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    paddingTop: 100, // Add some space between the title and the paragraph
+    paddingTop: 100, 
   },
   paragraph: {
     fontSize: 16,
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 20, // Adjust spacing as needed
+    marginTop: 20, 
     paddingHorizontal: 10,
   },
   button: {

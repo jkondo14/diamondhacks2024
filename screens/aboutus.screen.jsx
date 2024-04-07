@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20, // Add some space between the title and the paragraph
+    marginBottom: 20, 
   },
   paragraph: {
     fontSize: 16,

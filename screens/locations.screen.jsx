@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Linking, Alert } from 'react-native';
 
-// Sample data with an additional "features" array for each college
+
 const colleges = [
   {
     id: '1',
@@ -185,14 +185,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#add8e6',
   },
   pageTitle: {
-    fontSize: 24,
+    fontSize: 36,
     fontWeight: 'bold',
     marginTop: 50,
-    marginBottom: 10,
+    marginBottom: 20,
     textAlign: 'center',
   },
   paragraph: {
-    fontSize: 14,
+    fontSize: 20,
     marginBottom: 10,
     fontWeight: 'bold',
     marginHorizontal: 10,
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
     paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingVertical: 20,
   },
   sectionTitle: {
     fontSize: 16,
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     backgroundColor: '#eee',
     paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
   },
