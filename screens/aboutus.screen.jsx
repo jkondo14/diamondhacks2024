@@ -11,7 +11,8 @@ const AboutUs = ({ navigation }) => {
         dedicated to providing you with the best experience possible and improving your study experience here at UCSD. 
         We believe in quality, innovation, and customer satisfaction. Our app offers a wide range of features 
         designed to enhance your daily life, making it more convenient and enjoyable. Thank you for choosing us, 
-        and we hope you enjoy using our app!
+        and we hope you enjoy using our app!{'\n'}
+        {'\n'}
       </Text>
       <Button
         title='Home'
@@ -36,9 +37,11 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     fontSize: 16,
-    textAlign: 'left',
-    marginBottom: 20,
-    paddingHorizontal: 100,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingTop: 20,
+    paddingBottom: 20,
+    paddingHorizontal: 10,
   },
   button: {
     backgroundColor: '#00bfff',

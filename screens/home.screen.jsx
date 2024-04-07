@@ -1,40 +1,71 @@
 import React from 'react'
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Button from '../components/button.component';
 
+
 const HomeScreen = ({ navigation }) => {
+  const handlePressUCSDLogo = async () => {
+    const url = 'https://ucsd.edu';
+    // Check if the link is supported
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      // Open the link
+      await Linking.openURL(url);
+    } else {
+      console.error("Can't open this URL: " + url);
+    }
+  };
+
+  const handlePressACMLogo = async () => {
+    const url = 'https://acmucsd.com/';
+    // Check if the link is supported
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      // Open the link
+      await Linking.openURL(url);
+    } else {
+      console.error("Can't open this URL: " + url);
+    }
+  };
+
   return (
      <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         <Text style={styles.title}>Study with us at UCSD!</Text>
         <Text style={styles.paragraph}>
-          Welcome! We are glad you have stumbled across our beginner project consisiting of students, who are in their first year at
+          Welcome! We are glad you have stumbled across our beginner project consisiting of students who are in their first year at
           UCSD, both first-years and junior transfers. Utilizing tools such as React, JavaScript, API, etc. we have created an extensive
-          experience for students to find optimal study spaces!<br/><br/>
-          We understand that studying in your dormitory, apartment, or wherever you live may not always be one's preference as we
+          experience for students to find optimal study spaces!{'\n'}
+          {'\n'}We understand that studying in your dormitory, apartment, or wherever you live may not always be one's preference as we
           often are distarcted or feel sleepy at home. We also understand that people like change and do not like to only study at
           Geisel Library forever so we made it our mission to make an amazing application and create an interactive expereience. 
-          Stay Locked in with new study spots and become the Academic weapon you always aspired to be!<br/><br/>
-          Feel free to explore our small tool we have created to enhance student's experience
-          for learning at UCSD. Go Tritons! <br/>
-          <br/>
-          This app was created during ACM's(Assocation for Computing Machinery) 2024 Diamond Hacks in La Jolla, California. Thank you
+          Stay Locked in with new study spots and become the Academic weapon you always aspired to be!{'\n'}
+          {'\n'}Feel free to explore our small tool we have created to enhance student's experience
+          for learning at UCSD. Go Tritons! {'\n'}
+          {'\n'}This app was created during ACM's(Assocation for Computing Machinery) 2024 Diamond Hacks in La Jolla, California. Thank you
           for taking the time to look through our project and we hope you enjoy our app!
         </Text>
-        <Button
-            title='About Us'
+        <View style={styles.buttonContainer}>
+          <Button
+            title="About Us"
             onPress={() => navigation.navigate('About Us')}
             style={styles.button}
-        />
-        <Button
-            title='Locations'
+          />
+          <View style={styles.space} />
+          <Button
+            title="Locations"
             onPress={() => navigation.navigate('Locations')}
             style={styles.button}
-        />
+          />
+      </View>
         <View style={styles.imageRow}>
+        <TouchableOpacity onPress={handlePressUCSDLogo}>
           <Image source={require('../images/UCSDLogo.png')} style={styles.image1} resizeMode="contain" />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handlePressACMLogo}>
           <Image source={require('../images/acmlogo.png')} style={styles.image2} resizeMode="contain" />
+        </TouchableOpacity>
         </View>
         <StatusBar style='auto' />
         <View style={styles.bottomContainer}>
@@ -58,19 +89,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingBottom: 0, // Ensure there's padding at the bottom
   },
+  buttonContainer: {
+    flexDirection: 'row', // Aligns buttons horizontally
+    alignItems: 'center',
+  },
+  space: {
+    width: 20, // Spacing between buttons, adjust as needed
+  },
   title: {
-    fontSize: 100,
+    fontSize: 60,
     fontWeight: 'bold',
+    textAlign: 'center',
     marginBottom: 350,
-    paddingTop: 300, // Add some space between the title and the paragraph
+    paddingTop: 300, 
+    paddingHorizontal: 15,// Add some space between the title and the paragraph
   },
   paragraph: {
-    fontSize: 24,
+    fontSize: 16,
     fontWeight: 'bold',
-    textAlign: 'left',
+    textAlign: 'center',
     paddingTop: 200,
-    paddingBottom: 400,
-    paddingHorizontal: 300,
+    paddingBottom: 20,
+    paddingHorizontal: 10,
   },
   button: {
     backgroundColor: '#00bfff',
@@ -95,7 +135,7 @@ const styles = StyleSheet.create({
   bottomContainer: {
   backgroundColor: '#007BFF', // Example background color
   width: '100%', // Ensure the background color spans the full width
-  paddingVertical: 0, // Add vertical padding to create space around the text
+  paddingBottom: 20, // Add vertical padding to create space around the text
   marginBottom: 0,
   paddingHorizontal: 20, // Add horizontal padding for better text spacing
 },
