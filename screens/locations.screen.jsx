@@ -8,9 +8,9 @@ const colleges = [
     name: 'Revelle College',
     description: 'Locations:',
     features: [
-      { id: '1', feature: '64 Degrees', value: '323 Seats', link: 'https://rb.gy/ik3wle' },
-      { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: 'https://rb.gy/lyqpdf' },
-      { id: '3', feature: 'Revelle Commuter Lounge', value: '25 Seats', link: 'https://rb.gy/cik7c5' },
+      { id: '1', feature: '64 Degrees', value: '323 Seats', link: 'https://tinyurl.com/567nfktt' },
+      { id: '2', feature: 'Galbraith Hall', value: '130 Seats', link: 'https://tinyurl.com/ph8w4u5c' },
+      { id: '3', feature: 'Revelle Commuter Lounge', value: '25 Seats', link: 'https://tinyurl.com/42d2kb2d' },
     ],
   },
   {
@@ -18,8 +18,8 @@ const colleges = [
     name: 'Muir College',
     description: 'Locations:',
     features: [
-      { id: '4', feature: 'John\'s Market(Outdoors)', value: '10 Seats', link: 'https://rb.gy/asqgo9' },
-      { id: '5', feature: 'Middle of Muir(MOM)', value: '121 Seats', link: 'https://rb.gy/x0xlo9' },
+      { id: '4', feature: 'John\'s Market(Outdoors)', value: '10 Seats', link: 'https://tinyurl.com/mrx8j2pe' },
+      { id: '5', feature: 'Middle of Muir(MOM)', value: '121 Seats', link: 'https://tinyurl.com/mspvxrek' },
       { id: '6', feature: 'Pines Dining Hall', value: '274 Seats', link: 'https://tinyurl.com/mwkcztwj' },
       { id: '7', feature: 'Roots Restaurant', value: '50 Seats', link: 'https://tinyurl.com/mstpds5u' },
     ],
